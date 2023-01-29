@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!---------------  PRIMARY META DATA  --------------->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grilli</title>
+  <meta name="title" content="Grilli - Amazing & Delicious Food">
+
+  <!---------------  FAVICON  --------------->
+  <link rel="shortcut icon" href="./imgs/favicon.svg" type="image/x-icon">
+
+  <!---------------  PRELOAD HERO IMAGES  --------------->
+  <link rel="preload" as="image" href="./imgs/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./imgs/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./imgs/hero-slider-3.jpg">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!---------------  MAIN CSS FILE  --------------->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <!--------------- LOADER --------------->
+  <div class="loader">
+    <div class="loader__container">
+
+      <div class="loader__circle">
+        <span class="loader__circle__rotate"></span>
+      </div>
+
+      <p class="loader__text">GRILLI</p>
+    </div>
+  </div>
+
+
+  <!--------------- OVERLAY --------------->
+  <div class="overlay"></div>
+
+
+  <a href="#" class="scrollup">
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+  <!--------------- TOP BAR --------------->
+  <div class="topbar">
+    <div class="topbar__info1 topbar__info">
+      <p>
+        <ion-icon name="call-outline" class="icon" aria-hidden="true"></ion-icon>
+        <span class="text"><a href="tel:+11234567890">+1 123 456 7890</a></span>
+      </p>
+
+      <div class="square">
+        
+      </div>
+
+      <p>
+        <ion-icon name="mail-outline" class="icon" aria-hidden="true"></ion-icon>
+        <span class="text"><a href="mailto:booking@restaurant.com">booking@restaurant.com</a></span>
+      </p>
+    </div>
+
+    <div class="topbar__info2 topbar__info">
+      <p>
+        <ion-icon name="location-outline" class="icon" aria-hidden="true"></ion-icon>
+        <span class="text">Restaurant St, Delicious City, London 9578, UK</span>
+      </p>
+
+      <div class="square">
+
+      </div>
+
+      <p>
+        <ion-icon name="time-outline" class="icon" aria-hidden="true"></ion-icon>
+        <span class="text">Daily : 8.00 am to 10.00 pm</span>
+      </p>
+    </div>
+  </div>
+
+
+  <!--------------- HEADER --------------->
+  <header class="header">
+
+    <div class="header__logo">
+      <img src="./imgs/logo.svg" alt="">
+    </div>
+
+    <div class="header__menu__navigation">
+      <li class="first">
+        <a href="#home">HOME</a>
+      </li>
+
+      <li>            
+      <a href="#aboutus">ABOUT US</a>
+      </li>
+
+      <li>
+        <a href="#menus">MENUS</a>
+      </li> 
+
+      <li>
+        <a href="#contacto">CONTACT</a>
+      </li>
+    </div>
+    
+    <button class="findTable btn">
+      FIND TABLE
+    </button>
+
+    <div class="header__icon">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+    </div>
+
+  </header>
+  <div class="header__menu">
+    <div class="header__menu__container">
+
+      <div class="header__menu__close">
+        <ion-icon name="close-outline" class="close" aria-hidden="true"></ion-icon>
+      </div>
+
+      <div class="header__menu__logo">
+        <img src="./imgs/logo.svg" alt="">
+      </div>
+
+      <div class="header__menu__nav">
+        <li class="first">
+          <div>
+            <span class="square"></span>
+          </div>
+          <a href="#home">HOME</a>
+        </li>
+
+        <li>            
+          <div>
+            <span class="square"></span>
+          </div>
+          <a href="#aboutus">ABOUT US</a>
+        </li>
+
+        <li>
+        <div>
+          <span class="square"></span>
+        </div>
+        <a href="#menus">MENUS</a>
+        </li> 
+
+        <li>
+          <div>
+            <span class="square"></span>
+          </div>
+          <a href="#contacto">CONTACT</a>
+        </li>
+      </div>
+
+      <div class="header__menu__info">
+        <h1>Visit Us</h1>
+        <address>
+          <p>Restaurant St, Delicious City,
+            <span>London 9578, UK</span>
+          </p>
+
+          <p>Open: 9.30 am - 2.30pm</p>
+
+          <p>booking@grilli.com</p>
+
+          <div class="square"></div>
+
+          <span class="request">
+            Booking Request
+          </span>
+
+          <span class="number">
+            +88-123-123456
+          </span>
+        </address>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--------------- HERO SWIPER --------------->
+  <div class="swiper section"  id="home">
+
+      <div class="swiper__slide slide1 active">
+        <div class="swiper__slide__img__holder">
+          <img src="./imgs/hero-slider-1.jpg" alt="">
+        </div>
+
+        <div class="swiper__slide__info">
+          <div>
+            <p class="title">Tradational & Hygine</p>
+            <img src="./imgs/separator.svg" alt="">
+          </div>
+
+          <div>
+            <h1>For the love of <br> delicious food</h1>
+            <p class="slide__description">Come with family & feel the joy of mouthwatering food</p>
+          </div>
+
+          <button>View Our Menu</button>
+        </div>
+
+
+      </div>
+
+      <div class="swiper__slide slide2">
+        <div class="swiper__slide__img__holder">
+          <img src="./imgs/hero-slider-2.jpg" alt="">
+        </div>
+
+        <div class="swiper__slide__info">
+          <div>
+            <p class="title">DELIGHTFUL EXPERIENCE</>
+            <img src="./imgs/separator.svg" alt="">
+          </div>
+          <div>
+            <h1>Flavors Inspired by <br> the Seasons</h1>
+            <p class="slide__description">Come with family & feel the joy of mouthwatering food</p>
+          </div>
+          <button>View Our Menu</button>
+        </div>
+      </div>
+
+      <div class="swiper__slide slide3">
+        <div class="swiper__slide__img__holder">
+          <img src="./imgs/hero-slider-3.jpg" alt="">
+        </div>
+
+        <div class="swiper__slide__info">
+          <div>
+            <p class="title">amazing & delicious</p>
+            <img src="./imgs/separator.svg" alt="">
+          </div>
+
+          <div>
+            <h1>Where every flavor <br> tells a story</h1>
+            <p class="slide__description">Come with family & feel the joy of mouthwatering food</p>
+          </div>
+          
+          <button>View Our Menu</button>
+        </div>
+      </div>
+
+      <div class="hero__icon__container">
+        <img src="./imgs/hero-icon.png" alt="">
+        <p>BOOK A <br> TABLE</p>
+      </div> 
+
+      <div class="slide-prev-btn slide_btn">
+        <ion-icon name="chevron-back"></ion-icon>
+      </div>
+
+      <div class="slide-next-btn slide_btn">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </div>
+
+  </div>
+
+
+  <!--------------- FLAVORS --------------->
+  <div class="flavors">
+    <div class="flavors__container">
+      <p class="flavors__title">FLAVORS FOR ROYALTY</p>
+        <img src="./imgs/separator.svg" class="flavors__title__img">
+  
+        <h2 class="flavors__h2">We Offer Top Notch</h2>
+        <p class="flavors__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
+  
+        <div class="flavor__service__container">
+          <div class="flavor flavor1">
+            <div class="flavor__food__img__container">
+              <img src="./imgs/service-1.jpg" alt="" class="flavor__food__img">
+              <span></span>
+            </div>
+            <p class="flavor__name">Breakfast</p>
+            <div class="flavor__menu">view menu</div>
+          </div>
+  
+          <div class="flavor flavor2">
+            <div class="flavor__food__img__container">
+              <img src="./imgs/service-2.jpg" alt="" class="flavor__food__img">
+              <span></span>
+            </div>          
+            <p class="flavor__name">Appetizers</p>
+            <div class="flavor__menu">view menu</div>
+          </div>
+    
+          <div class="flavor flavor3">
+            <div class="flavor__food__img__container">
+              <img src="./imgs/service-3.jpg" alt="" class="flavor__food__img">
+              <span></span>
+            </div>          
+            <p class="flavor__name">Drinks</p>
+            <div class="flavor__menu last">view menu</div>
+  
+          </div>
+        </div>
+        <img src="./imgs/shape-2.png" alt="" class="shape shape2">
+        <img src="./imgs/shape-1.png" alt="" class="shape shape1">
+    </div>    
+  </div>
+
+
+  <!--------------- STORY --------------->
+  <div class="story section" id="aboutus">
+    <img src="./imgs/shape-3.png" alt="" class="shape">
+    <div class="story_container">
+      <div class="child1">
+        <div class="story_title">our story</div>
+        <img src="./imgs/separator.svg" alt="" class="story_seperator">
+        <h1>Every Fla vor Tells a Story</h1>
+        <p class="story_description">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also the leap into.</p>
+        <span>Book Through Call</span>
+        <div class="story_number">+80 (400) 123 4567</div>
+        <button>read more</button>
+      </div>
+  
+      <div class="child2">
+        <img src="./imgs/about-banner.jpg" alt="" class="mainImg">
+        <img src="./imgs/about-abs-image.jpg" alt="" class="spamImg">
+        <img src="./imgs/badge-2.png" alt="" class="circle">
+        <img src="./imgs/badge-2-bg.png" alt="" class="circleText">
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+  <!--------------- DISH --------------->
+  <div class="dish">
+    <div class="dish_img">
+      <img src="./imgs/special-dish-banner.jpg" alt="">
+    </div>
+
+    <div class="dish_info">
+      <img src="./imgs/badge-1.png" class="dish_badge">
+      <p class="dish_title">SPECIAL DISH</p>
+      <img src="./imgs/separator.svg" class="dish_seperator">
+      <h1>Lobster Tortellini</h1>
+      <p class="dish_description">
+        Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.
+      </p>
+      <div class="dish_prices">
+        <del class="price1">$40.00</del>
+        <span class="price2">$20.00</span>
+      </div>
+      <button>VIEW ALL MENU</button>
+    </div>
+
+    <img src="./imgs/shape-4.png" class="shape shape1">
+    <img src="./imgs/shape-9.png" class="shape shape2">
+  </div>
+
+
+  <!--------------- MENU --------------->
+  <div class="menu section" id="menus">
+    <img src="./imgs/shape-5.png" class="shape shape1">
+    <img src="./imgs/shape-6.png" class="shape shape2">
+
+    <div class="menu_container">
+
+      <div class="menu_info1">
+        <p class="menu_title">SPECIAL SELECTION</p>
+        <img src="./imgs/separator.svg" class="menu_seperator">
+        <h1>Delicious Menu</h1>
+      </div>
+
+      <div class="menu_selections">
+
+        <div>
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-1.png" class="menu_img">
+            </div>
+
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">Greek Salad</div>
+                <div class="additional_info">seasonal</div>
+                <div class="seper"></div>
+                <div class="price">$25.50</div>
+              </div>
+              <p class="menu_dish_description">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</p>
+            </div>
+
+          </div>
+  
+  
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-2.png" class="menu_img">
+            </div>
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">Butternut Pumpkin</div>
+                <div class="additional_info notActive"></div>
+                <div class="seper"></div>
+                <div class="price">$10.00</div>
+              </div>
+              <p class="menu_dish_description">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</p>
+            </div>
+          </div>
+  
+  
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-3.png" class="menu_img">
+            </div>
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">livas Rellenas</div>
+                <div class="additional_info notActive"></div>
+                <div class="seper"></div>
+                <div class="price">$25.50</div>
+              </div>
+              <p class="menu_dish_description">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-4.png" class="menu_img">
+            </div>
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">Lasagne</div>
+                <div class="additional_info notActive"></div>
+                <div class="seper"></div>
+                <div class="price">$40.00</div>
+              </div>
+              <p class="menu_dish_description">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+            </div>
+          </div>
+  
+  
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-5.png" class="menu_img">
+            </div>
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">Tokusen Wagyu</div>
+                <div class="additional_info">new</div>
+                <div class="seper"></div>
+                <div class="price">$39.00</div>
+              </div>
+              <p class="menu_dish_description">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+            </div>
+          </div>
+  
+  
+          <div class="menu_dish">
+            <div class="div">
+              <img src="./imgs/menu-6.png" class="menu_img">
+            </div>
+            <div class="menu_dish_info">
+              <div class="above_info">
+                <div class="title">Opu Fish</div>
+                <div class="additional_info notActive"></div>
+                <div class="seper"></div>
+                <div class="price">$49.00</div>
+              </div>
+              <p class="menu_dish_description">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu_info2">
+        <p class="menu_time">
+          During winter daily from <span>7:00</span> pm to <span> 9:00 pm</span>
+        </p>
+        <button>VIEW ALL MENU</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--------------- TESTIMONIAL --------------->
+  <div class="testimonial section"  id="contact">
+    <blockquote><span>&rdquo;</span> I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</blockquote>
+
+    <div class="testimonial_seperators">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="testimonial_profile">
+      <div class="testimonial_pic"><img src="./imgs/testi-avatar.jpg" alt=""></div>
+      <div class="testimonial_name">sam jhonson</div>
+    </div>
+
+    <div class="trick"></div>
+
+    <!--------------- RESERVATION & CONTACT --------------->
+    <div class="reservation-contact" id="contacto">
+      <div class="reservation_container">
+        <h1>Online Reservation</h1>
+        <p>Booking request <a  href='tel:+88-123-123456'>+88-123-123456</a> or fill out the order form</p>
+  
+        <form action="">
+          <div class="line1 line">
+            <input type="text" placeholder="Your Name">
+            <input type="tel" placeholder="Phone Number">
+          </div>
+  
+          <div class="line2 line">
+  
+            <div>
+              <select class="icons">
+                <option value="">1 Person</option>
+                <option value="">2 Person</option>
+                <option value="">3 Person</option>
+                <option value="">4 Person</option>
+                <option value="">5 Person</option>
+                <option value="">6 Person</option>
+                <option value="">7 Person</option>
+              </select>
+              <ion-icon name="chevron-down" class="chevron" aria-hidden="true"></ion-icon>
+              <ion-icon name="person-outline" class="person" aria-hidden="true"></ion-icon>
+            </div>
+          
+            <div class="second">
+              <input type="date" placeholder="Select a Date"  class="icons dateInput"> 
+              <ion-icon name="calendar-clear-outline" class="calendar" aria-hidden="true"></ion-icon>
+              <ion-icon name="chevron-down" class="chevron" aria-hidden="true"></ion-icon>
+            </div>
+  
+            <div>
+              <select class="icons">
+                <option>08:00 am</option>
+                <option>09:00 am</option>
+                <option>10:00 am</option>
+                <option>11:00 am</option>
+                <option>12:00 am</option>
+                <option>01:00 pm</option>
+                <option>02:00 pm</option>
+                <option>03:00 pm</option>
+                <option>04:00 pm</option>
+                <option>05:00 pm</option>
+                <option>06:00 pm</option>
+                <option>07:00 pm</option>
+                <option>08:00 pm</option>
+                <option>09:00 pm</option>
+                <option>10:00 pm</option>
+              </select>
+              <ion-icon name="chevron-down" class="chevron" aria-hidden="true"></ion-icon>
+              <ion-icon name="time-outline" class="time" aria-hidden="true"></ion-icon>
+            </div>
+          </div>
+  
+          <textarea placeholder="Message"></textarea>
+  
+          <button>book a table</button>
+        </form>
+      </div>
+  
+      <div class="contact_container">
+        <h1>Contact Us</h1>
+  
+        <div>
+          <div class="title title1">Booking Request</div>
+          <span class="number"><a href="tel:++88-123-123456">+88-123-123456</a></span>
+        </div>
+  
+        <div class="seperator"></div>
+  
+        <div>
+          <div class="title">Location</div>
+          <address class="desc">Restaurant St, Delicious City,<span>London 9578, UK</span></address>
+        </div>
+  
+        <div>
+          <div class="title">Lunch Time</div>
+          <span class="desc">Monday to Sunday <span>11:00 am - 2:30pm</span></span>
+        </div>
+  
+        <div>
+          <div class="title">Dinner Time</div>
+          <span class="desc">Monday to Sunday <span>05:00 am - 10:00pm</span></span>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <!--------------- FEATURES --------------->
+  <div class="features">
+    <div class="features_title">WHY CHOOSE US</div>
+    <img src="./imgs/separator.svg" alt="" class="features_seperator">
+    <h1>Our Strength</h1>
+    <div class="features_container">
+      <img src="./imgs/shape-7.png" alt="" class="shape shape1">
+      <img src="./imgs/shape-8.png" alt="" class="shape shape2">
+
+      <div class="features_box diff">
+        <img src="./imgs/features-icon-1.png" alt="">
+        <h3>Hygienic Food</h3> 
+        <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+      </div>
+
+      <div class="features_box">
+        <img src="./imgs/features-icon-2.png" alt="">
+        <h3>Fresh Environment</h3>
+        <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+      </div>
+
+      <div class="features_box diff">
+        <img src="./imgs/features-icon-3.png" alt="">
+        <h3>Skilled Chefs</h3>
+        <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+      </div>
+
+      <div class="features_box">
+        <img src="./imgs/features-icon-4.png" alt="">
+        <h3>Event & Party</h3>
+        <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!--------------- EVENTS --------------->
+  <div class="events">
+    <p class="events_title">Recent Updates</p>
+    <img src="./imgs/separator.svg" class="events_seperator" alt="">
+    <h1>Upcoming Event</h1>
+
+    <div class="events_container">
+      <div class="events_box">
+        <img src="./imgs/event-1.jpg" alt="">
+        <div class="date">15/09/2022</div>
+        <div class="info">
+          <p>Food, Flavour</p> 
+          <div class="desc">Flavour so good you’ll try to eat with your eyes.</div>
+        </div>
+      </div>
+      <div class="events_box">
+        <img src="./imgs/event-2.jpg" alt="">
+
+        <div class="date">08/09/2022</div>
+        <div class="info">
+          <p>Healthy Food</p>
+          <div class="desc">Flavour so good you’ll try to eat with your eyes.</div>
+        </div>
+      </div>
+      <div class="events_box last">
+        <img src="./imgs/event-3.jpg" alt="">
+
+        <div class="date">03/09/2022</div>
+        <div class="info">
+          <p>Recipie</p>
+          <div class="desc">Flavour so good you’ll try to eat with your eyes.</div>
+        </div>
+      </div>
+    </div>
+
+    <button>view our blog</button>
+  </div>
+
+
+  <!--------------- FOOTER --------------->
+  <footer class="footer">
+    <div class="footer_container">
+      <div class="card">
+        <img src="./imgs/logo.svg" alt="">
+
+        <div class="info">
+          <address>Restaurant St, Delicious City, London 9578, UK</address>
+          <a href="mailto:booking@grilli.com">booking@grilli.com</a>
+          <p>Booking Request : +88-123-123456</p>
+          <p>Open : 09:00 am - 01:00 pm</p>
+        </div>
+
+        <div class="seperators">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="offers">
+          <h3>Get News & Offers</h3>
+          <p>Subscribe us & Get <span>25% Off.</span></p>
+        </div>
+
+        <div class="inputs">
+          <div class="email">
+            <input type="email" placeholder="Your email">
+            <ion-icon name="mail-outline" aria-hidden="true" class="icon"></ion-icon>
+          </div>
+          <button>subscribe</button>
+        
+        </div>
+      </div>
+
+      <div class="list1 list">
+        <a href="#home">HOME</a>
+        <a href="#menus">MENUS</a>
+        <a href="#aboutus">ABOUT US</a>
+        <a href="#ourchefs">OUR CHEFS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+
+      <div class="list2 list">
+        <a href="https://www.facebook.com">FACEBOOK</a>
+        <a href="#https://www.instagram.com">INSTAGRAM</a>
+        <a href="#https://www.twitter.com">TWITTER</a>
+        <a href="#https://www.youtube.com">YOUTUBE</a>
+        <a href="#https://www.google.com/maps">GOOGLE MAP</a>
+      </div>
+    </div>
+
+    <div class="copyright">&copy; 2023 Grilli. All Rights Reserved</div>
+  </footer>
+
+
+
+
+
+<!---------------  MAIN JS FILE  --------------->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="./js/main.js"></script>
+
+<!---------------  IONICONS  --------------->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>

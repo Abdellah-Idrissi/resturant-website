@@ -1,0 +1,93 @@
+
+@use './sections' as *;
+
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 17px;
+  transition: 0.3s;
+  border-bottom: 1px solid $white-alpha-10;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 20;
+
+  &.hide {
+    transform: translateY(-200px);
+  }
+
+  &__info {
+    display: flex;
+    column-gap: 30px;
+    p {
+      display: flex;
+      align-items: center;
+      color: $white;
+      font-weight: $weight-regular;
+      font-size: 14.3px;
+      transition: 0.3s;
+    }
+
+
+    .icon {
+      margin-right: 4px;
+      font-size: 16px;
+      --ionicon-stroke-width: 55px;
+    }
+
+  }
+
+  &__info1 {
+    p {
+      &:hover {
+        color: $gold-crayola;
+      }
+    }
+  }
+
+  &__info2,
+  .square {
+    display: none;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .topbar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .topbar {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+
+    &__info2 {
+      display: flex;
+    }
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .topbar {
+    &__info {
+      column-gap: 25px;
+    }
+    .square {
+      display: block;
+      background-color: transparent;
+      width: 8px;
+      aspect-ratio: 1/1;
+      align-self: center;
+      border: 1px solid $gold-crayola;
+      transform: rotate(45deg);
+    }
+  }
+
+}
+
+

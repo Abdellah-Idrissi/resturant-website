@@ -1,0 +1,156 @@
+@use './sections' as *;
+
+
+.dish {
+  display: grid;
+  row-gap: 60px;
+  padding-bottom: 60px;
+  background-color: $smoky-black-2;
+
+  .shape {
+    display: none;
+  }
+
+  &_badge {
+    margin-inline: auto;
+    margin-bottom: 15px;
+    width: 23px;
+    position: relative;
+    left: 4px;
+  }
+  &_info {
+    text-align: center;
+    padding-inline: 20px;
+  }
+
+  &_title {
+    @extend %sectionTitle;
+  }
+
+  &_seperator {
+    @extend %sectionTitleSeperator;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: $fontFamily-forum;
+    font-weight: $weight-regular;
+    margin-block: 25px;
+    font-size: $fontSize-headline-1;
+  }
+
+  &_description {
+    line-height: 1.85em;
+    margin-bottom: 25px;
+  }
+
+  &_prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    .price1 {
+      color: $davys-grey;
+      font-size: $fontSize-body-3;
+    }
+
+    .price2 {
+      color: $gold-crayola;
+      font-size: $fontSize-body-1;
+    }
+  }
+
+  button {
+    @include btn(transparent,$gold-crayola,$gold-crayola,$smoky-black-1,'VIEW ALL MENU');
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width:700px) and (max-width:949px) {
+  .dish {
+    &_description {
+      max-width: 600px;
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (min-width:800px) {
+  .dish {
+    padding-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+
+    &_img {
+      img {
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_info {
+      padding-block: $section-space;
+      padding-inline: 90px 50px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &_badge {
+      display: none;
+    }
+
+    &_seperator,
+    button {
+      margin-right: auto;
+      margin-inline: initial;
+    }
+
+    h1 {
+      text-align: left;
+    }
+
+    &_prices {
+      justify-content: start;
+    }
+
+    &_description {
+      max-width: 425px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      margin-top: 30px;
+    }
+
+
+  }
+}
+
+@media (min-width:800px) and (max-width: 899px) {
+  .dish {
+    &_info {
+      padding-inline: 70px 50px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .dish {
+    position: relative;
+    .shape {
+      display: block;
+      position: absolute;
+      right: 0;
+      &.shape1 {
+        bottom: 120px;
+      }
+
+      &.shape2 {
+        bottom: calc(-356px / 2);
+      }
+    }
+  }
+}

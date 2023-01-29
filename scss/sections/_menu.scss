@@ -1,0 +1,280 @@
+@use './sections' as *;
+
+.menu {
+  padding-block: $section-space;
+  padding-inline: 20px;
+
+  &_container {
+    display: grid;
+    row-gap: 40px;
+  }
+
+  &_title {
+    @extend %sectionTitle;
+    text-align: center;
+  }
+
+  &_seperator {
+    @extend %sectionTitleSeperator;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: $fontFamily-forum;
+    font-weight: 400;
+    margin-block: 25px;
+    font-size: $fontSize-headline-1;
+  }
+
+  &_time {
+    text-align: center;
+
+    span {
+      display: inline;
+      color: $gold-crayola;
+    }
+    margin-block: 10px 30px;
+  }
+
+  button {
+    @include btn(transparent,$gold-crayola,$gold-crayola,$smoky-black-1,'view all menu');
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+
+  &_selections {
+
+    > div:first-of-type {
+      margin-bottom: 60px;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 60px;
+    }
+  }
+
+
+  &_dish {
+    display: flex;
+    column-gap: 15px;
+    align-items: flex-start;
+
+    &:hover{
+      .div {
+        img {
+          transform: scale(1.06);
+        }
+
+        &::before {
+          animation: flashing 0.6s linear;
+        }
+      }
+
+      .menu_dish_info {
+        .title {
+          color: $gold-crayola;
+        }
+      }
+
+    }
+
+
+    &_info {
+
+      .above_info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 13px;
+      }
+
+      .additional_info {
+        background-color: $gold-crayola;
+        width: fit-content;
+        text-transform: uppercase;
+        font-family: $fontFamily-forum;
+        font-size: 13px;
+        color: $smoky-black-2;
+        font-weight: $weight-regular;
+        padding: 3px 8px;
+
+        &.notActive {
+          display: none;
+        }
+      }
+
+      .seper {
+        display: none;
+      }
+
+      .title {
+        font-family: $fontFamily-forum;
+        font-size: $fontSize-title-3;
+        font-weight: $weight-regular;
+        transition: $transition-2;
+        cursor: pointer;
+      }
+
+      .price {
+        font-size: $fontSize-title-2;
+        font-family: $fontFamily-forum;
+        color: $gold-crayola;
+      }
+
+    }
+
+    &_description {
+      font-size: $fontSize-label-1;
+      color: $quick-silver;
+      line-height: $lineHeight-4;
+    }
+
+    .div {
+      overflow: hidden;
+      min-width: 100px;
+      border-radius: 30px;
+      position: relative;
+      &::before {
+        content: '';
+        background-color: rgba(228, 197, 144, 0.5);
+        width: 0px;
+        height: 0px;
+        border-radius: 30px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.6s linear;
+      }
+
+      img {
+        transition: $transition-2;
+        max-width: initial;
+      }
+    }
+
+
+
+
+  }
+
+  .shape {
+    display: none;
+  }
+}
+
+@media (max-width:370px) {
+  .menu {
+    &_time {
+      font-size: 14.5px;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .menu {
+
+    &_selections {
+      margin-inline: auto;
+    }
+
+    &_dish {
+      align-items: center;
+      .above_info {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 15px;
+      }
+
+      &_description {
+        max-width: 495px;
+      }
+
+      .seper {
+        display: block;
+        flex: 1;
+        height: 5px;
+        border-block: 1px solid $white-alpha-20;
+      }
+
+      &_info {
+        .price {
+          font-size: 2.5rem;
+        }
+
+        .title {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    position: relative;
+    overflow: hidden;
+    .shape {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      animation: upAndDown2 2s linear infinite alternate;
+      &.shape1 {
+        top: 0;
+        left: 0;
+      }
+
+      &.shape2 {
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &_info2 {
+      margin-top: 30px;
+    }
+
+
+    &_selections {
+      > div:first-of-type {
+        margin-bottom: 0px;
+      }
+
+      display: flex;
+      column-gap: 110px;
+    }
+
+
+
+    
+
+    &_dish {
+      max-width: 460px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .menu {
+    position: relative;
+    &_selections {
+      column-gap: 200px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      height: 420px;
+      width: 1px;
+      top: calc(50% - 202px);
+      background-color: $white-alpha-20;
+    }
+  }
+}
+

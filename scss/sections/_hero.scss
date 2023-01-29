@@ -1,0 +1,246 @@
+@use './sections' as *;
+
+
+
+.swiper {
+  width: 100vw;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+
+  .hero__icon__container {
+    z-index: 10;
+    position: absolute;
+    bottom: 40px;
+    right: 35px;
+    background-color: $gold-crayola;
+    width: 75px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    align-self: end;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: transparent;
+      border: 0.1px solid $gold-crayola;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: $transition-3;
+      animation: rotate360 13s linear infinite;
+      z-index: -1;
+    }
+
+    img {
+      width: 32px;
+      padding-top: 5.5px;
+    }
+    p {
+      font-size: 8px;
+      color: $black;
+      font-weight: $weight-bold;
+      line-height: $lineHeight-3;
+      text-align: center;
+      margin-top: 3px;
+      align-self: start;
+      letter-spacing: 0.14em;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+    background-color: transparent;
+    opacity: 1;
+    transition: 1s;
+    overflow: hidden;
+    
+    &.active {
+      z-index: 5;
+      opacity: 1;
+
+      .swiper__slide__info {
+
+        div:first-of-type {
+          animation: slideTextReveal 1s linear backwards 500ms;
+        }
+
+        div:last-of-type {
+          h1 {
+            animation: slideTextReveal 1s linear backwards 900ms;
+          }
+
+          p {
+            animation: slideTextReveal 1s linear backwards 1300ms;
+          }
+        }
+
+        button {
+          animation: slideTextReveal 1s linear backwards 1600ms;
+        }
+
+      }
+
+      .swiper__slide__img__holder {
+        animation: zoomIn 7s forwards;
+      }
+    }
+
+    &__img__holder {
+      height: 100%;
+      width: 100%;
+      transition: 8s;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      position: absolute;
+      text-align: center;
+      display: grid;
+      transition: 2s;
+
+
+      .title {
+        @extend %sectionTitle
+      }
+
+      div:first-of-type {
+        margin-bottom: 45px;
+        img {
+          @extend %sectionTitleSeperator;
+        }
+        margin-top: 10px;
+      }
+
+      div:last-of-type {
+        margin-bottom: 45px;
+        h1 {
+          font-family: $fontFamily-forum;
+          font-weight: $weight-regular;
+          font-size: $fontSize-display-1;
+          line-height: $lineHeight-1;
+          margin-bottom: 20px;
+        }
+
+        .slide__description {
+          padding-inline: 10px;
+          font-size: $fontSize-body-2;
+          line-height: $lineHeight-4;
+        }
+      }
+
+      button {
+        @include btn(transparent,$gold-crayola,$gold-crayola,$smoky-black-1,'view our menu');
+        border: 2px solid $gold-crayola;
+        width: fit-content;
+        text-transform: uppercase;
+        margin-inline: auto;
+      }
+
+    }
+
+  }
+
+  .slide_btn {
+    display: none;
+  }
+
+}
+
+
+@media (min-width:575px) {
+  .swiper {
+    &__slide {
+      div:last-of-type {
+        .slide__description {
+          font-size: 1.8rem;
+        }
+      }
+
+      div:first-of-type {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width:767px) {
+  .swiper {
+    .slide_btn {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 48%;
+      font-size: 25px;
+      color: $gold-crayola;
+      width: 46px;
+      aspect-ratio: 1/1;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      border: 1px solid $gold-crayola;
+      transform: rotate(45deg);
+      transition: $transition-2;
+  
+      &:hover {
+        background-color: $gold-crayola;
+        color: $black;
+      }
+  
+      ion-icon {
+        transform: rotate(-45deg);
+      }
+  
+      &.slide-prev-btn {
+        left: 30px;
+      }
+  
+      &.slide-next-btn {
+        right: 30px;
+      }
+    }
+  }
+
+}
+
+@media (min-width:992px) {
+  .swiper {
+    &__slide {
+      div:last-of-type {
+        h1 {
+          font-size: calc(1.2rem + 6.7vw);
+        }
+
+        .slide__description {
+          font-size: 2.2rem;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+@media (max-height:650px) {
+  .swiper {
+    .hero__icon__container {
+      display: none;
+    }
+
+  }
+}

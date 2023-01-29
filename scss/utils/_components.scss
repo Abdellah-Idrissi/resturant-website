@@ -1,0 +1,101 @@
+@use './utils' as *;
+@use 'sass:string';
+
+@mixin linesUnder ($bottomValue) {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4.6px;
+    border-block: 1px solid $gold-crayola;
+    bottom: $bottomValue;
+    left: 0;
+    transform: scaleX(0.2);
+    transition: $transition-2;
+    opacity: 0;
+  }
+
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+}
+
+@mixin linesUnderCurr {
+    &::before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+}
+
+@mixin btn($backColor , $textColor , $hoverBackColor , $hoverTextColor , $text) {
+  background-color: $backColor;
+  color: $textColor;
+  text-align: center;
+  letter-spacing: $letterSpacing-5;
+  font-weight: $weight-bold;
+  font-size: $fontSize-label-2;
+  padding: 18px 45px;
+  transition: $transition-1;
+  border: 1px solid $gold-crayola;
+  position: relative;
+  overflow: hidden;
+
+
+
+
+  &:hover {
+      &::before {
+        transform: translateY(0);
+      }
+  
+      &::after {
+        transform: translateY(0) scale(2);
+      }
+  }
+
+  &::before {
+    content: string.to-upper-case($text);
+    color: $hoverTextColor;
+    position: absolute;
+    transform: translateY(35px);
+    transition:  $transition-1;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $hoverBackColor;
+    width: 120%;
+    height: 100px;
+    border-radius:50% 50% 49% 51% / 79% 76% 24% 21% ;
+    top: 0;
+    left: -16px;
+    transform: translateY(-105px);
+    transition:  0.5s ease;
+  }
+}
+
+
+%sectionTitle {
+  text-transform: uppercase;
+  font-weight: $weight-bold;
+  letter-spacing: $letterSpacing-2;
+  font-size: 12px;
+  color: $gold-crayola;
+}
+
+%sectionTitleSeperator {
+  width: 110px;
+  margin-inline: auto;
+  margin-top: 24px;
+}

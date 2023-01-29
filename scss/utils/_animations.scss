@@ -1,0 +1,125 @@
+@use './utils' as *;
+
+
+// Loader section animations
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingText {
+  0% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+
+// Header section animations
+@keyframes menuIcon {
+  from {
+    width: 50%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+// Hero section animations
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes slideTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes flashFlavor {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 300%;
+  }
+}
+
+
+@keyframes upAndDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes upAndDown2 {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(25px);
+  }
+}
+
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+
+@keyframes test {
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

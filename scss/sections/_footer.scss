@@ -1,0 +1,236 @@
+@use './sections' as *;
+
+.footer {
+  background-image: url(../../imgs/footer-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  padding: $section-space 20px;
+
+  .card {
+    background: $smoky-black-1 url(../../imgs/form-pattern.png);
+    position: relative;
+    text-align: center;
+    padding: 40px 40px;
+
+    &::before,
+    &::after {
+      content: '';
+      background-image: url(../../imgs/img-pattern.svg);
+      background-size: cover;
+      position: absolute;
+      width: 15px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      left: initial;
+      right: 0;
+    }
+
+    img {
+      margin-inline: auto;
+      margin-bottom: 35px;
+    }
+
+    .offers,.info {
+      color: $quick-silver;
+      font-size: $fontSize-body-4;
+    }
+
+    .info {
+      display: grid;
+      row-gap: 10px;
+      margin-bottom: 35px;
+      address,a,p {
+        line-height: $lineHeight-3;
+      }
+    }
+
+    .offers {
+      margin-bottom: 35px;
+      h3 {
+        color: white;
+        font-family: $fontFamily-forum;
+        font-weight: $weight-regular;
+        margin-bottom: 4px;
+        font-size: $fontSize-title-1;
+      }
+
+      p {
+        font-size: $fontSize-label-1;
+        span {
+          color: white;
+          font-family: $fontFamily-forum;
+          font-weight: $weight-regular;
+          display: inline;
+        }
+      }
+    }
+
+    .seperators {
+      display: flex;
+      justify-content: center;
+      gap: 1px;
+      margin-bottom: 35px;
+      span {
+        display: inline;
+        width: 8px;
+        height: 8px;
+        border: 1px solid $gold-crayola;
+        background-color: transparent;
+        animation: rotate360 7s linear infinite;
+      }
+    }
+
+    .email {
+      position: relative;
+      margin-bottom: 17px;
+      input {
+        padding: 20px;
+        padding-left: 45px;
+        background-color: $eerie-black-2;
+        border: 1px solid $white-alpha-10;
+        transition: $transition-2;
+        color: $white;
+      }
+
+      .icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 15px;
+        --ionicon-stroke-width: 40px;
+      }
+
+
+    }
+
+
+    ::placeholder {
+      color: $white;
+    }
+
+    button {
+      text-transform: uppercase;
+      @include btn($gold-crayola,$smoky-black-2,$smoky-black-2,$white,'subscribe')
+    }
+
+
+
+
+
+
+  }
+
+  .list {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    row-gap: 30px;
+    color: $quick-silver;
+    font-size: $fontSize-label-2;
+    letter-spacing: $letterSpacing-4;
+    font-weight: $weight-bold;
+    line-height: $lineHeight-5;
+    &1 {
+      margin-block: 40px 60px;
+    }
+
+    a {
+
+      transition: $transition-2;
+      margin-inline: auto;
+      @include linesUnder(-7px);
+
+      &:hover {
+        color: $gold-crayola;
+      }
+
+      &::before {
+        height: 5px;
+        left: -1.11px;
+      }
+
+    }
+
+  }
+
+
+  .copyright {
+    text-align: center;
+    color: $quick-silver;
+    margin-block: 70px 0px;
+    font-size: 14.5px;
+  }
+
+}
+
+@media (min-width:575px) {
+  .footer {
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "email email button";
+
+      .email {
+        grid-area: email;
+        margin-bottom: 0;
+      }
+
+      button {
+        grid-area: button;
+        padding-inline: 10px;
+      }
+
+
+    }
+  }
+}
+
+@media (min-width:767px) {
+  .footer {
+    &_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "card card card card" "list1 list1 list2 list2";
+      row-gap: 50px;
+      .card {
+        grid-area: card;
+      }
+
+      .list1 {
+        grid-area: list1;
+        margin: 0;
+      }
+
+      .list2 {
+        grid-area: list2;
+      }
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .footer {
+    padding-inline: 0;
+    &_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "list1 card card list2";
+      max-width: 1300px;
+      margin-inline: auto;
+
+      .card {
+        padding: 60px 50px;
+      }
+
+      .list {
+        align-self: center;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@use './sections' as *;
+
+.loader {
+  background-color: $gold-crayola;
+  width: 100vw;
+  height: 100vh;
+  transition: $transition-3;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+
+  &.down {
+    transform: translateY(100%);
+  }
+
+  &__container {
+    display: grid;
+    place-items: center;
+  }
+
+  &__circle {
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border-radius: $radius-circle;
+    border: 3px solid $white;
+    position: relative;
+
+    &__rotate {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      border-radius: $radius-circle;
+      background-color: transparent;
+      border: 3px solid transparent;
+      border-top: 3px solid $eerie-black-3;
+      animation: loader 1s linear infinite;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    letter-spacing: $letterSpacing-4;
+    font-weight: $weight-bold;
+    position: relative;
+    left: 2px;
+    font-size: $fontSize-headline-1;
+    position: relative;
+
+    // Important Rules
+    line-height: normal;
+    color: transparent;
+
+    // To give border to text
+    -webkit-text-stroke: 0.3px $eerie-black-3;
+
+    background: {
+      // To make linear gradient as background image
+      image: $loading-text-gradient;
+
+      // To make linear gradient merge as a color
+      clip: text;
+      size: 500%;
+    }
+
+    animation: loadingText linear 2s infinite;
+  }
+}

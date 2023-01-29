@@ -1,0 +1,71 @@
+@use "./base/index" as *;
+
+body {
+  background-color: $eerie-black-1;
+  color: $white;
+  font-family: $fontFamily-dm-sans;
+  font-size: $fontSize-body-4;
+  font-weight: $weight-regular;
+  line-height: $lineHeight-5;
+  overflow: hidden;
+  height: 300vh;
+
+  &.loaded {
+    overflow: overlay;
+  }
+
+  &.hidden {
+    overflow-y: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $gold-crayola;
+  height: 30px;
+}
+
+.scrollup {
+  position: fixed;
+  bottom: 30px;
+  right: -100%;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: $radius-circle;
+  cursor: pointer;
+  background-color: $gold-crayola;
+  display: grid;
+  place-items: center;
+  z-index: 20;
+  transition: $transition-2;
+
+
+  &.show {
+    right: 20px;
+  }
+
+  &:is(:hover) {
+    background-color: $white;
+    ion-icon {
+      color: $gold-crayola;
+    }
+  }
+
+  ion-icon {
+    transition: $transition-2;
+    color: $smoky-black-2;
+    --ionicon-stroke-width: 40px;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

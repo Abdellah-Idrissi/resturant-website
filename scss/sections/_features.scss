@@ -1,0 +1,133 @@
+@use './sections' as *;
+
+.features {
+  padding-top: 1280px;
+  padding-bottom: $section-space;
+  text-align: center;
+  padding-inline: 20px;
+
+  &_title {
+    @extend %sectionTitle;
+  }
+
+  &_seperator {
+    @extend %sectionTitleSeperator;
+  }
+
+  h1 {
+    font: {
+      size: $fontSize-headline-1;
+      weight: $weight-regular;
+      family: $fontFamily-forum;
+    }
+
+    padding-block: 25px 50px;
+  }
+
+  &_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_box {
+    background-color: $smoky-black-3;
+    padding: 30px 20px;
+
+    &:hover {
+      img {
+        transform: scale(-1) rotate(180deg);
+      }
+    }
+
+    img {
+      margin-inline: auto;
+      transition: $transition-2;
+    }
+
+    h3 {
+      margin-block: 20px 17px;
+      font: {
+        size: $fontSize-title-2;
+        family: $fontFamily-forum;
+        weight: $weight-regular;
+      }
+
+    }
+
+    p {
+      color: $quick-silver;
+      line-height: $lineHeight-3;
+      font-size: $fontSize-label-1;
+    }
+
+    &.diff{
+      background-color: $eerie-black-3;
+    }
+
+  }
+
+  .shape {
+    display: none;
+  }
+
+}
+
+
+@media (min-width:992px) {
+  .features {
+    padding-top: 1050px;
+    &_container {
+      grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    }
+
+    &_box {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width:1100px) {
+  .features {
+    padding-top: 510px;
+  }
+}
+
+@media (min-width:1200px) {
+  .features {
+    &_container {
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+  }
+}
+
+@media (min-width:1320px) {
+  .features {
+    &_container {
+      grid-template-columns: repeat(4,270px);
+    }
+  }
+}
+
+@media (min-width:1400px) {
+  .features {
+    .shape {
+      display: block;
+      position: absolute;
+      &1 {
+        right: -17px;
+        top: -383px;
+      }
+
+      &2 {
+        left: -20px;
+        bottom: -30px;
+      }
+    }
+  }
+}
