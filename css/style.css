@@ -1170,7 +1170,7 @@ address {
 }
 .flavors .flavor__service__container .flavor__food__img__container::after {
   content: "";
-  background-image: url(../../imgs/img-pattern.svg);
+  background-image: url(../imgs/img-pattern.svg);
   background-size: cover;
   position: absolute;
   width: 30%;
@@ -1469,7 +1469,7 @@ address {
   bottom: -27.7%;
   left: 2.5%;
   z-index: 2;
-  background: url(../../imgs/img-pattern.svg);
+  background: url(../imgs/img-pattern.svg);
 }
 .story .child2 .mainImg {
   width: 90%;
@@ -2078,7 +2078,7 @@ address {
   }
 }
 .testimonial {
-  background-image: url(../../imgs/testimonial-bg.jpg);
+  background-image: url(../imgs/testimonial-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2282,7 +2282,7 @@ address {
   transition: 0.5s ease;
 }
 .reservation-contact .contact_container {
-  background-image: url(../../imgs/form-pattern.png);
+  background-image: url(../imgs/form-pattern.png);
   background-color: hsl(30deg, 8%, 5%);
   padding: 40px 20px;
   text-align: center;
@@ -2703,20 +2703,20 @@ address {
   }
 }
 .footer {
-  background-image: url(../../imgs/footer-bg.jpg);
+  background-image: url(../imgs/footer-bg.jpg);
   background-position: center top;
   background-size: cover;
   padding: 70px 20px;
 }
 .footer .card {
-  background: hsl(40deg, 12%, 5%) url(../../imgs/form-pattern.png);
+  background: hsl(40deg, 12%, 5%) url(../imgs/form-pattern.png);
   position: relative;
   text-align: center;
   padding: 40px 40px;
 }
 .footer .card::before, .footer .card::after {
   content: "";
-  background-image: url(../../imgs/img-pattern.svg);
+  background-image: url(../imgs/img-pattern.svg);
   background-size: cover;
   position: absolute;
   width: 15px;
