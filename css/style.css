@@ -3044,7 +3044,8 @@ body {
   height: 300vh;
 }
 body.loaded {
-  overflow: overlay;
+  overflow: hidden;
+  
 }
 body.hidden {
   overflow-y: hidden;
