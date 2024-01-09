@@ -6,6 +6,8 @@
   font-size: 10px;
 }
 
+
+
 *,
 *::before,
 *::after {
@@ -3097,4 +3099,10 @@ body.hidden {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+body {
+
+    overflow-x:hidden;
+
 }
